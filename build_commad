@@ -1,0 +1,1 @@
+xelatex -synctex=1 -interaction=nonstopmode -output-directory=.build %.tex| mv .build/%.pdf %.pdf |evince %.pdf
