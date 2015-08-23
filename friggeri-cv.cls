@@ -23,6 +23,7 @@
 \definecolor{darkgray}{HTML}{222222} %\modified by pritish
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{999999}
+\definecolor{black}{HTML}{000000}
 
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
@@ -42,8 +43,10 @@
   \colorlet{fillheader}{gray}
   \colorlet{header}{white}
 \fi
-\colorlet{textcolor}{gray}
-\colorlet{headercolor}{gray}
+%\colorlet{textcolor}{gray}
+\colorlet{textcolor}{black}
+%\colorlet{headercolor}{gray}
+\colorlet{headercolor}{black}
 
 %%%%%%%%%
 % Fonts %
@@ -162,8 +165,8 @@
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-     \textsl{#4}\\ %
-    \addfontfeature{Color=darkgray}#5\vspace{\parsep}%
+     \addfontfeature{Color=darkgray}\textsl{#4}\\ %
+    \addfontfeature{Color=gray}#5\vspace{\parsep}%
   }\\ }
 
 
@@ -172,7 +175,7 @@
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-     \textsl{#4}\vspace{0.5\parsep}%
+     \addfontfeature{Color=darkgray}\textsl{#4}\vspace{0.5\parsep}%
   }\\ }
 
 \newcommand{\entryyy}[3]{%
