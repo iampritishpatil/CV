@@ -1,7 +1,7 @@
 \ProvidesClass{friggeri-cv}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
-\def\@cv@print{}  %%   uncomment  this for black and white for printing
+%\def\@cv@print{}  %%   uncomment  this for black and white for printing
 
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -9,10 +9,6 @@
 }
 \ProcessOptions\relax
 \LoadClass{article}
-
-
-
-
 
 
 %%%%%%%%%%
@@ -24,7 +20,7 @@
 \definecolor{white}{RGB}{255,255,255}
 
 %\definecolor{darkgray}{HTML}{333333}
-\definecolor{darkgray}{HTML}{222222}
+\definecolor{darkgray}{HTML}{222222} %\modified by pritish
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{999999}
 
@@ -53,54 +49,18 @@
 % Fonts %
 %%%%%%%%%
 
-% \RequirePackage[quiet]{fontspec}
-% \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-% 
-% \newfontfamily\bodyfont[]{Helvetica Neue}
-% \newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-% \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
-% 
-% \defaultfontfeatures{Mapping=tex-text}
-% \setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
-% 
-% \setmathfont{XITS Math}
-
-%%% modified by Karol Kozioł for ShareLaTex use
-%\RequirePackage[quiet]{fontspec}
-%\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-
-%\newfontfamily\bodyfont
-%[BoldFont=texgyreheros-bold.otf,
-%ItalicFont=texgyreheros-italic,
-%BoldItalicFont=texgyreheros-bolditalic]
-%{texgyreheros-regular.otf}
-%\newfontfamily\thinfont[]{Lato-Light}
-%\newfontfamily\headingfont[]{texgyreheros-bold.otf}
-%
-%\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont
-%[Mapping=tex-text, Color=textcolor,
-%BoldFont=texgyreheros-bold.otf,
-%ItalicFont=texgyreheros-italic,
-%BoldItalicFont=texgyreheros-bolditalic
-%]
-%{texgyreheros-regular.otf}
-
-%\setmathfont{texgyreheros-regular.otf}
-%%%
-
 
 %modified by pritish
 
  \RequirePackage[quiet]{fontspec}
  \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
  
- \newfontfamily\bodyfont[]{texgyreheros-regular.otf}
- \newfontfamily\thinfont[]{Lato-Light}
- \newfontfamily\headingfont[]{Linux Biolinum O Bold}
+ \newfontfamily\bodyfont[ Path            = fonts/,]{texgyreheros-regular.otf}
+ \newfontfamily\thinfont[ Path            = fonts/,]{Lato-Light}
+ \newfontfamily\headingfont[ Path            = fonts/,]{LinBiolinum_RB.otf}
  
  \defaultfontfeatures{Mapping=tex-text}
- \setmainfont[Mapping=tex-text, Color=textcolor]{Linux Libertine O}
+ \setmainfont[Mapping=tex-text, Color=textcolor ,  Path            = fonts/,]{LinLibertine_R.otf}
  
 % \setmathfont{XITS Math}
 
