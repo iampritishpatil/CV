@@ -43,7 +43,7 @@
   \colorlet{fillheader}{gray}
   \colorlet{header}{white}
 \fi
-%\colorlet{textcolor}{gray}
+%\colorlet{textcolor}{darkgray}
 \colorlet{textcolor}{black}
 %\colorlet{headercolor}{gray}
 \colorlet{headercolor}{black}
@@ -61,11 +61,12 @@
  \newfontfamily\bodyfont[ Path            = fonts/,]{texgyreheros-regular.otf}
  \newfontfamily\thinfont[ Path            = fonts/,]{Lato-Light}
  \newfontfamily\headingfont[ Path            = fonts/,]{LinBiolinum_RB.otf}
- 
+% \newfontfamily\headingfont[ Path            = fonts/,]{LinLibertine_RB.otf}
  \defaultfontfeatures{Mapping=tex-text}
- \setmainfont[Mapping=tex-text, Color=textcolor ,  Path            = fonts/,]{LinLibertine_R.otf}
- 
+% \setmainfont[Mapping=tex-text, Color=textcolor ,  Path            = fonts/,]{LinLibertine_R.otf}
+  \setmainfont[Mapping=tex-text, Color=textcolor ,  Path            = fonts/,]{LinBiolinum_R.otf}
 % \setmathfont{XITS Math}
+\newfontfamily\lotsoftextfont[ Path            = fonts/,]{LinLibertine_R.otf}
 
 
 
@@ -131,8 +132,11 @@
   \par\vspace{\parskip}
   {%
     \Large\headingfont\color{headercolor}%
-    \@sectioncolor #1%
+    \@sectioncolor #1 %
   }
+  
+  %\rule{\textwidth}{1pt}
+  
   \par\vspace{\parskip}
 }
 
@@ -157,8 +161,9 @@
 \newenvironment{entrylist}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
-  \end{tabular*}
+  \end{tabular*}\vspace{-0.8\parskip}
 }
+
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[5]{%
   #1&\parbox[t]{16.5cm}{%
@@ -166,7 +171,7 @@
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
      \addfontfeature{Color=darkgray}\textsl{#4}\\ %
-    \addfontfeature{Color=gray}#5\vspace{\parsep}%
+    \lotsoftextfont{{\addfontfeature{Color=gray}#5}}\vspace{\parsep}%
   }\\ }
 
 
