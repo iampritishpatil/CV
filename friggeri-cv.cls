@@ -355,3 +355,15 @@
 %\RequirePackage[left=7.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage[left=1.5cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
+
+
+%%%%%%%%%
+%For page numbering
+%%%%%%%%
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LE,RO]{Pritish Patil CV Page \thepage /\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
