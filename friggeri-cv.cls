@@ -64,7 +64,7 @@
 % \newfontfamily\headingfont[ Path            = fonts/,]{LinLibertine_RB.otf}
  \defaultfontfeatures{Mapping=tex-text}
 % \setmainfont[Mapping=tex-text, Color=textcolor ,  Path            = fonts/,]{LinLibertine_R.otf}
-  \setmainfont[Mapping=tex-text, Color=textcolor ,  Path            = fonts/,]{LinBiolinum_R.otf}
+  \setmainfont[Mapping=tex-text, Color=textcolor ,  Path            = fonts/,BoldFont={LinBiolinum_RB.otf},]{LinBiolinum_R.otf}
 % \setmathfont{XITS Math}
 \newfontfamily\lotsoftextfont[ Path            = fonts/,]{LinLibertine_R.otf}
 
@@ -180,7 +180,7 @@
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-     \addfontfeature{Color=darkgray}\textsl{#4}\vspace{0.5\parsep}%
+     \lotsoftextfont{\addfontfeature{Color=gray}#4}\vspace{0.5\parsep}%
   }\\ }
 
 \newcommand{\entryyy}[3]{%
