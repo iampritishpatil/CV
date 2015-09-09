@@ -1,8 +1,15 @@
 %!TEX TS-program = xelatex
-\documentclass[11pt]{friggeri-cv}
+
+\documentclass[11pt]{friggeri-cv}%,print
 %\addbibresource{bibliography.bib}
 
+
+\usepackage{enumitem}
+
 \usepackage{multicol}
+
+\setlist[itemize]{leftmargin=*}
+
 \setlength{\columnsep}{2cm}
 \begin{document}
 \header{pritish } {patil} 
@@ -12,100 +19,67 @@
 
 
 
-
-% In the aside, each new line forces a line break
-%\begin{aside}
-%  \section{current address}
-%    Room number 9
-%    N-Block Hostel
-%    Indian Institute of Science
-%    Bangalore 560012
-%    India
-%  \section{permanent address}
-%  19, Dhavalgiri Society
-%  Takali Road
-%  Nashik 422011
-%  India  
-%  \section{email id}
-%    \href{mailto:iampritishpatil@gmail.com}{iampritishpatil@gmail.com}
-%    \href{mailto:ugpatil@ug.iisc.in}{ugpatil@ug.iisc.in}
-%  \section{phone}
-%  +91-8861-557-553
-%  \section{languages}
-%    English
-%    Marathi
-%    Hindi
-%  \section{programming}
-%    C
-%    R
-%    Python
-%    Matlab
-%    \LaTeX
-%    shell/bash
-%  \section{computer skills}
-%  linux/unix
-%\end{aside}
-
 \section{interests}
 
-Dynamical Systems in Biology, Modelling Biological Systems, Neuroscience, Ecology, Systems Biology, Theoretical Biology, Spatial Dynamics, Mathematical Biology, Astronomy, Numerical Methods, Algorithms, Scientific Computing
+Theoretical Neuroscience, Computational Neuroscience, Stochastic Modeling, Numerical Methods, Systems Biology, Stochastic Differential Equations, Spatial Dynamics, Applied Mathematics in Biology.
 
 
 \section{education}
 
 \begin{entrylist}
-  \entryy
+  \entryyy
     {2012--2016}
-    {Bachelor of Science}
+    {Bachelor of Science {\normalfont Biology Major with Mathematics Minor }}
     {Indian Institute of Science, Bangalore}
-    {Biology Major with Mathematics Minor \hspace{2em}
-     CGPA 6.7/8.0  (After 5 semesters)}
-  \entryy
+  \entryyy
     {2012}
-    {12th Grade}
-    {KVN Naik College, Nashik}
-    {Science Stream \hspace{2em} 
-      79.83\%}
-  \entryy
+    {12th Grade {\normalfont Science Stream}}
+  {KVN Naik College, Nashik}
+  \entryyy
     {2010}
-    {10th Grade}
+    {10th Grade     {\normalfont Matriculation}}
     {JDC Bytco High School, Nashik}
-    {Matriculation \hspace{2em}    
-    86.16\%}
-
 \end{entrylist}
 
 
 \section{major achievements}
 \begin{entrylist}
-  \entryy
+  \entryyy
     {2012}
-    {International Biology Olympiad}
+    { {\normalfont Silver Medal@}International Biology Olympiad     }
     {Singapore, Singapore}
-    {Silver Medal}
-  \entryy
+    
+  \entryyy
     {2011}
-    {International Biology Olympiad}
+    {  {\normalfont Silver Medal@}International Biology Olympiad}
     {Taipei, Taiwan}
-    {Silver Medal}
-  \entryy
+    
+  \entryyy
     {2010}
-    {International Astronomy Olympiad}
+    { {\normalfont Silver Medal@}International Astronomy Olympiad }
     {Crimea, Ukraine}
-    {Silver Medal}
 
 
 
 \end{entrylist}
 
 \section{research experience}
+
+\begin{entrylist}
+  \entry
+    {2015}
+    {Making a realistic model CA1 Pyramidal Neuron in MOOSE (Ongoing)}
+    {NCBS, Bangalore}
+    {Guide : Dr. Upi Bhalla, NCBS, Bangalore}
+    {Coming up with a distrubution ion channels for the CA1 Pyramidal neurons which has realistic behavior for different morphologies. All coding in MOOSE}
+\end{entrylist}
 \begin{entrylist}
   \entry
     {2014}
     {Finding network topologies which show adaptation response}
     {NCBS, Bangalore}
     {Guide : Dr. Sandeep Krishna, NCBS, Bangalore}
-    {Modelled a general three node gene/protein network using a system of differential equations and simulated it. The aim was to find the topologies which show the adaptation response. Used variable step-size 4th order Runge-Kutta routine to solve the system of differential equations.}
+    {Modelled a general three node gene/protein network using a system of differential equations and simulated it. The aim was to find the topologies which show the adaptation response.}
 \end{entrylist}
 \begin{entrylist}
 
@@ -114,8 +88,7 @@ Dynamical Systems in Biology, Modelling Biological Systems, Neuroscience, Ecolog
     {Modelling of High Energy Cosmic Ray Spectrum}
     {HBCSE, Mumbai}
     {Guide : Prof. Mayank Vahia, TIFR, Mumbai}
-    {Explored the effect of magnetic field on cosmic rays produced inside galaxies and proposed an explanation for the features seen in the cosmic ray spectrum. Tried to explain galactic X-Ray halos using these cosmic rays. 
-    }
+    {Explored the effect of magnetic field on cosmic rays produced inside galaxies and proposed an explanation the features of cosmic ray spectrum. Tried to explain galactic X-Ray halos using these cosmic rays.}
 \end{entrylist}
 \begin{entrylist}
     
@@ -125,8 +98,7 @@ Dynamical Systems in Biology, Modelling Biological Systems, Neuroscience, Ecolog
     {IISc Bangalore}
     {
     Guide : Prof. V. Nagaraja, IISc, Bangalore}
-    {Learned various lab techniques like Polyacrylamide Gel Electrophoresis, Ion-exchange Chromatography, Affinity and Immunoaffinity Chromatography, Metal Chelate Affinity Chromatography,  Size-exclusion Chromatography. General techniques in microbiology were also learned.
-    }    
+    {Learned various lab techniques like PAGE, various types of chromatography and Genenreal techniques in microbiology.}    
 \end{entrylist}
 \begin{entrylist}
 
@@ -135,9 +107,23 @@ Dynamical Systems in Biology, Modelling Biological Systems, Neuroscience, Ecolog
     {Constraining Dark Energy Parameters using Supernova-1a data}
     {IISER, Mohali}
     {Guide : Prof H.K. Jassal, IISER Mohali}
-    {Understood standard cosmology,  obtained constraints on dark energy parameters of the standard model and evaluated different cosmological models by comparing with SN1A data(Union Supernova Project).     }
+    {Understood standard cosmology,  obtained constraints on dark energy parameters of the standard model and evaluated different cosmological models by comparing with SN1A data(Union Supernova Project).
+    }
     
 \end{entrylist}
+\begin{entrylist}
+
+
+  \entry
+    {2012}
+    {Karyotyping for screening of chromosomal abnormalities}
+    {Genetic Health \& Research Centre, Nasik}
+    {
+    Guide : Dr. Dnyandeo Chopade, Genetic Health \& Research Centre, Nasik}
+    {
+    Mastered the basics of Karyotyping. Learned to make karyotypes from blood and from chorionic villi.  Apprenticed for  detection of defects in chromosomes in the karyotypes.
+    }
+    \end{entrylist}
     \begin{entrylist}
 
 
@@ -147,7 +133,8 @@ Dynamical Systems in Biology, Modelling Biological Systems, Neuroscience, Ecolog
     {NCRA, Pune}
     {
     Guide : Dr. Yogesh Wadadekar, NCRA, Pune}
-    {Analysed the radio properties of 1 million quasars (all the known quasars at that time) found by SDSS photometrically. Correlated the optical data to radio data by doing statistics on radio image stacks of quasars.}
+    {Analysed the radio properties of 1 million quasars found by SDSS photometrically. Correlated the optical data to radio data and did statistics on radio image stacks of quasars.
+    }
     \end{entrylist}
     \begin{entrylist}
   \entry
@@ -156,7 +143,7 @@ Dynamical Systems in Biology, Modelling Biological Systems, Neuroscience, Ecolog
     {NCRA, Pune}
     {
     Guide : Dr. Yogesh Wadadekar, NCRA, Pune}
-    {Studied the effects of changes in metallicity of a nebula upon the evolution of clusters of stars within it. 
+    {Studied the effects of changes in metallicity of a nebula upon the evolution of clusters of stars within it.
     }
 
     \end{entrylist}
@@ -176,17 +163,23 @@ Dynamical Systems in Biology, Modelling Biological Systems, Neuroscience, Ecolog
 
 \begin{entrylist}
 \entry
+    {2015}
+    {Analysis of Dendritic transmission}
+    {Theoretical and Computational Neuroscience}
+    {
+    Prof. Rishikesh Narayanan and Prof. SP Arun, IISc Bangalore}
+    {Using a realistic detailed neuronal model, studied dendritic transmission and computation. Using only poisson input and corresponding output spike trains, calculated time for dendritic transmission, and after correcting for this delay, analyzed how synaptic processing.}    
+\end{entrylist}
+\begin{entrylist}
+\entry
     {2014}
-    {Spatial Dynamics of Sympatric Speciation (Ongoing)}
+    {Spatial Dynamics of Sympatric Speciation}
     {Theoretical and Mathematical Ecology}
     {
     Prof. Vishwesha Guttal, IISc Bangalore}
-    {Studied spatial dynamics of sympatric speciation due to disruptive selection. 
+    {Studied spatial dynamics of sympatric speciation due to disruptive selection. Reproduced some of the results in "Speciation along environmental gradients" by Michael Doebeli and Ulf Dieckmann.
     }    
 \end{entrylist}
-
-
-
 \begin{entrylist}
 \entry
     {2014}
@@ -195,10 +188,9 @@ Animal movements and random walks}
     {Experiment in Ecology}
     {
     Dr. Farah Ishtiaq, IISc Bangalore}
-    {Explored how the leeches could be locating their prey in absence of stimulus. Found that the leeches perform a correlated random walk, which emulate a Levy random walk.
+    {Explored how the leeches could be locating their prey in absence of stimulus. Found that the leeches perform a correlated random walk, which emulates a Levy random walk.
     }    
 \end{entrylist}
-
 \begin{entrylist}
   \entry
     {2014}
@@ -206,7 +198,7 @@ Animal movements and random walks}
     {Introduction to Scientific Computing}
     {
     Prof. S. Raha, IISc Bangalore}
-    {Used Weiner Chaos Decomposition and Monte Carlo method to find the solutions of a system of stochastic differential equations numerically. Compared the accuracy  of and the time taken by these methods. 
+    {Used Weiner Chaos Decomposition and Monte Carlo method to find the solutions of a system of stochastic differential equations numerically. Compared the accuracy  of and the time taken by these methods.
     }    
 \end{entrylist}
 \begin{entrylist}
@@ -216,87 +208,33 @@ Animal movements and random walks}
     {Theoretical and Mathematical Ecology}
     {
     Prof. Vishwesha Guttal, IISc Bangalore}
-    {Modelled the effects of sexual selection on two loci in haploid and diploid systems analytically, and in more complex cases numerically. Studied various equilibria of the system and determined their stability. Analysed the dynamics of invasion of one genotype by another. 
+    {Modelled the effects of sexual selection on two loci in haploid and diploid systems analytically and other complex cases. Studied the equilibria of the system and determined their stability. Analysed the dynamics of invasion of one genotype by another. 
     }    
 \end{entrylist}
 
-
-
-
-
-
 \section{programming and computers}
-Proficient in C, R, Python,
-    Matlab,
-    \LaTeX,
-    shell/bash and
+\subsection{Common programming}
+C,
+ R, 
+ Python,
+    MATLAB,
+{    \lotsoftextfont \LaTeX},
+    shell/bash,
     linux.
+\subsection{Neuroscience related}
+MOOSE, NEURON, BRIAN 
 
-
-
-\section{other notable achievements}
-
-\begin{entrylist}
-  \entryy
-    {2011}
-    {Selected as a member of Indian team for International Earth Science Olympiad}
-    {Modena, Italy}
-    {One of top 4 from India to get selected.}
-\end{entrylist}
-
-
-\begin{entrylist}
-  \entryy
-    {2011 -- 2014}
-    {Recipient of KVPY (Kishore Vaigyanik Protsahan Yojana) Scholarship}{}
-    {Awarded to the top 200 science students from India each year.}
-
-\end{entrylist}
-
-
-\begin{entrylist}
-  \entryy
-    {2009 -- 2011}
-    {Recipient of NTSE (National Talent Search Exam) Scholarship}{}
-    {Awarded to the top 1000 students from India each year.}
-\end{entrylist}
-
-
-\begin{entrylist}
-  \entryy
-    {2013}
-    {Regionals of ACM International Collegiate Programming Contest}
-    {Amrita University Coimbatore}
-    {One of the top 389 teams selected from across the country}
-\end{entrylist}
-
-
-\begin{entrylist}
-  \entryy
-    {2013}
-    {Won MIMAMSA, a national inter-college science quiz}
-    {IISER, Pune}
-    {Qualified for the final quiz from amongst more than 100 teams and WON the 14 hours long quiz.}
-\end{entrylist}
-
-
-
-
-
-
+\pagebreak
 
 \begin{multicols}{2}[]
 
-\setlength\columnsep{0em}
-
 \begin{minipage}{1.1\columnwidth}
-\section{relevant courses (grad level)}
+\section{relevant courses [grad level]}
 
 
 \subsection{biology}
 
 \begin{itemize}
-
 \item Topics in Systems Neuroscience
 \item Theoretical and Computational Neuroscience
 \item Theoretical and Mathematical Ecology
@@ -309,8 +247,12 @@ Proficient in C, R, Python,
 
 \subsection{mathematics}
 \begin{itemize}
-\item Probability Theory
+
+\item Stochastic Processes {\small[martingales and brownian motion]}
+\item Probability Theory {\small[measure theoretic]}
 \item Measure theory
+\item Algebra
+\item Topology
 \item Linear Algebra
 \item Real Analysis
 \end{itemize}
@@ -319,35 +261,33 @@ Proficient in C, R, Python,
 \begin{itemize}
 \item Information Theory
 \end{itemize}
-
-
+\vspace{1em}
+\section{ relevant introductory courses }
+\begin{itemize}
+\item Physics (3 courses)
+\item Chemistry (3 courses)
+\item Mathematics (3 courses)
+\item Biology (3 courses)
+\end{itemize}
 
 
 
 \end{minipage}
 
-\begin{minipage}{1.1\columnwidth}
+\hspace{-1em}
+\begin{minipage}{1.05\columnwidth}
 
 
 
-\section{relevant courses (undergrad level)}
+\section{relevant courses [undergrad level]}
 
 \subsection{biology}
 \begin{itemize}
-\item Developmental Biology
+
 \item Introductory Structural Biology
 \item General Biochemistry
 \item Introductory Physiology
-\item Laboratory courses in Biology
-
-\begin{itemize}
-\item Biochemistry and Physiology
-\item Microbiology and Ecology
-\item Molecular Biophysics
-\item Neurobiology
-\item 3 semesters of introductory lab courses
-\end{itemize}
-
+\item Developmental Biology
 \end{itemize}
 
 
@@ -365,7 +305,18 @@ Proficient in C, R, Python,
 \item Introduction to Scientific Computing
 \item Algorithms and Programming
 \item Introduction to Electrical and Electronics Engineering
+\item Introduction to Material Sciences
+\item Introduction to Environmental Sciences
 \end{itemize}
+
+\subsection{laboratory courses}
+\begin{itemize}
+\item Experiments in Biochemistry and Physiology
+\item Experiments in Microbiology and Ecology
+\item Experiments in Molecular Biophysics
+\item Experiments in Neurobiology
+\end{itemize}
+
 
 
 \end{minipage}
@@ -374,68 +325,60 @@ Proficient in C, R, Python,
 
 
 
+\section{other notable achievements}
+
+\begin{entrylist}
+  \entryy
+    {2011}
+    {Selected as a member of Indian team for International Earth Science Olympiad}
+    {Modena, Italy}
+    {One of top 4 from India to get selected.}
+\end{entrylist}
+\begin{entrylist}
+  \entryy
+    {2011 -- 2014}
+    {Recipient of KVPY (Kishore Vaigyanik Protsahan Yojana) Scholarship}{}
+    {Awarded to the top 200 science students from India each year.}
+
+\end{entrylist}
+\begin{entrylist}
+  \entryy
+    {2009 -- 2011}
+    {Recipient of NTSE (National Talent Search Exam) Scholarship}{}
+    {Awarded to the top 1000 students from India each year.}
+\end{entrylist}
+\begin{entrylist}
+  \entryy
+    {2013}
+    {Won MIMAMSA, a national inter-college science quiz}
+    {IISER, Pune}
+    {Qualified for the final quiz from amongst more than 100 teams and WON the 14 hours long quiz.}
+\end{entrylist}
 
 
-\section{camps attended}
+\section{camps and workshops attended}
 
+\begin{entrylist}
+  \entryy
+    {2015}
+    {Computational Approaches to Memory and Plasticity }
+    {NCBS, Bangalore}
+    {16-day summer school on the theory and simulation of learning, memory and plasticity in the brain.}    
+\end{entrylist}
 \begin{entrylist}
   \entryy
     {2014}
     {Physics of Life, NCBS-Simons Annual Monsoon School}
     {NCBS, Bangalore}
-    {Topics included: biophysics and soft-matter physics, ranging from aspects molecules to those of cells and tissues; information processing and decision making, at the level of cells or of the brain; stochastic processes in molecules or populations; dynamical systems models of genetic networks or biomechanical systems.}
-    
+    {Topics included: biophysics and soft-matter physics; information processing and decision making; stochastic processes in molecules or populations; dynamical systems models of genetic networks or biomechanical systems.}    
 \end{entrylist}
-
-
-\begin{entrylist}
-  \entryy
-    {2012 2013}
-    {NIUS Astronomy Nurture Camp}
-    {HBCSE Mumbai}
-    {Worked on various astronomical projects listed above.}
-\end{entrylist}
-
-
 \begin{entrylist}
   \entryy
     {2011, 2012}
     {Vijyoshi Camp}
     {IISc, Bangalore}
     {Similar to Lindau Meet with Noble Laureates for students. For top \approx 600 science students across India }
-    
 \end{entrylist}
-
-
-
-
-
-
-
-
-
-\section{extracurricular activities}
-
-\begin{entrylist}
-  \entryy
-    {2014-2015}
-    {Programming Events Manager for Pravega, the annual college festival}
-    {IISc, Bangalore}
-    {Reverse coding: given the executable, write the source code. Online programming contest: a standard programming contest. Connect the dots: a programming treasure hunt, which requires you to solve programming questions to get to the next question}
-\end{entrylist}
-
-\begin{entrylist}
-  \entryy
-    {2013--2014}
-    {Convener and founder of Scipher}
-    {Bangalore}
-    {Scipher is a mock test for the KVPY scholarship exam. We set a model question paper and conducted the model exam across various states in India. 3,500 students took the mock exam Coordinated with ~30 people for setting and designing question paper. Co-ordinated with ~70 people for conduction and supervision of the examination.}
-\end{entrylist}
-
-
-
-
-
 
 
 %\section{experience}
@@ -504,8 +447,5 @@ Proficient in C, R, Python,
 %\end{refsection}
 %\printbibsection{misc}{other publications}
 %\printbibsection{report}{research reports}
-
-
-\textit{ You can email me for the longer, more detailed version of my CV.}
 
 \end{document}
