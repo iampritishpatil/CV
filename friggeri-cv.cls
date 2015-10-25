@@ -11,6 +11,29 @@
 \LoadClass{article}
 
 
+
+
+
+
+
+%%%%%%%%%%%%%Pritish addition
+
+\RequirePackage{calc}
+
+\newlength{\mylength}
+\setlength{\mylength}{16.5cm}%
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%
 % Colors %
 %%%%%%%%%%
@@ -32,11 +55,11 @@
 \definecolor{blue}{HTML}{6CE0F1}
 
 \ifdefined\@cv@print
-  \colorlet{green}{gray}
-  \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{red}{gray}
-  \colorlet{blue}{gray}
+  \colorlet{green}{black}
+  \colorlet{orange}{black}
+  \colorlet{purple}{black}
+  \colorlet{red}{black}
+  \colorlet{blue}{black}
   \colorlet{fillheader}{white}
   \colorlet{header}{gray}
 \else
@@ -164,9 +187,14 @@
   \end{tabular*}\vspace{-0.8\parskip}
 }
 
+
+
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[5]{%
-  #1&\parbox[t]{16.5cm}{%
+
+
+
+  #1&\parbox[t]{\mylength}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
@@ -176,7 +204,7 @@
 
 
 \newcommand{\entryy}[4]{%
-  #1&\parbox[t]{16.5cm}{%
+  #1&\parbox[t]{\mylength}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
@@ -184,7 +212,7 @@
   }\\ }
 
 \newcommand{\entryyy}[3]{%
-  #1&\parbox[t]{16.5cm}{%
+  #1&\parbox[t]{\mylength}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray}#3}%
@@ -353,9 +381,8 @@
 %%%%%%%%%%%%%%%%
 
 %\RequirePackage[left=7.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
-\RequirePackage[left=1.5cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
-
+%\RequirePackage[left=1.5cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
+\RequirePackage[hidelinks]{hyperref}
 
 %%%%%%%%%
 %For page numbering
