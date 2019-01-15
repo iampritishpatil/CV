@@ -36,12 +36,14 @@
 
 
 % Change the page layout if you need to
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\geometry{left=1cm,right=9.4cm,marginparwidth=7.2cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
 
 % Change the font if you want to.
 
 % If using pdflatex:
 \usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+
 \usepackage[OT1]{fontenc}[Ligatures=TeX]
 %\usepackage[default]{lato}
 \usepackage{libertine}
@@ -169,42 +171,104 @@
 %% You can always just use \marginpar{...} if you do
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
-\cvsection[sample-p1sidebar]{Experience}
 
-\cvevent{Job Title 1}{Company 1}{Month 20XX -- Ongoing}{Location}
-\begin{itemize}
-\item Job description 1
-\item Job description 2
-\end{itemize}
-
-\divider
-
-\cvevent{Job Title 2}{Company 2}{Month 20XX -- Ongoing}{Location}
-\begin{itemize}
-\item Job description 1
-\item Job description 2
-\end{itemize}
-
-\cvsection{Projects}
-
-\cvevent{Project 1}{Funding agency/institution}{}{}
-\begin{itemize}
-\item Details
-\end{itemize}
-
-\divider
-
-\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-A short abstract would also work.
-
-
-\clearpage
-\cvsection[page2sidebar]{Publications}
+\cvsection[sample-p1sidebar]{publications}
 
 \nocite{*}
 
 
 \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+
+
+
+\cvsection{research experience}
+
+\cvevent{Role of inhibioty interneurons in working memory}{Dr. Ofer Yizhar, Prof. Misha Tsodyks}{2017-ongoing}{Weizmann Institute of Science}
+\begin{itemize}
+\item Made new automated spatial working memory task for mice.
+\item Studied a theoretical model of working memory with various interneuron subtypes. 
+\item Tested long duration inhibition of c-fos using st-GtACR in the mouse mPFC.
+\end{itemize}
+
+\divider
+
+
+
+\cvevent{Testing st-GtACR in-vivo with fear conditioning}{Dr. Ofer Yizhar}{2017}{Weizmann Institute of Science}
+\begin{itemize}
+\item Injected mice with the st-GtACR in BLA
+\item Used fear conditioning as an assay to quantify effectiveness of silencing of st-GtACR to prevent exctinction of fear conditioning.
+\end{itemize}
+
+
+\divider
+
+
+\cvevent{Modeling and Recording Starburst Amacrine Cells}{Dr. Michal Rivlin}{2017}{Weizmann Institute of Science}
+\begin{itemize}
+\item Learned to patch clamp record from retinal neurons.
+\item Worked to make detailed biophysically realitic models to simulate Starburst Amacrine cells to study their direction selectivity.
+\end{itemize}
+
+\divider
+
+
+\cvevent{Recovering sychronization of data}{Prof. Nachum Ulanovsky}{2016}{Weizmann Institute of Science}
+\begin{itemize}
+\item Analzyed collected data from Bat location and Electrophysiology to try to recover the lost synchronization between the data streams.
+\end{itemize}
+
+
+\divider
+
+
+
+\cvevent{Making a realistic model CA1 Pyramidal Neuron in MOOSE}{Prof. Upinder S Bhalla}{2015 – 2016}{NCBS Bangalore}
+\begin{itemize}
+\item Wrote an optimization routine with to fit detailed biophysical models of neurons to experimental patch clamp data.
+\item Worked to extract features to be used in the optimization routine.
+\end{itemize}
+
+\vspace{2em}
+
+
+\addnextpagesidebar[-1ex]{page2sidebar}
+
+\cvevent{Finding network topologies which show adaptation response}{Dr. Sandeep Krishna}{2014}{NCBS, Bangalore}
+\begin{itemize}
+\item Wrote fast simulation of protein interactions with Michels-Menten kinetics.
+\item Sampled various toplogies/parameters to find adaptation response. 
+\end{itemize}
+
+%\clearpage
+
+%\cvsection[page2sidebar]{Publications}
+\cvsection{Teaching}
+%\marginpar[page2sidebar]{}
+
+
+\cvevent{Computational Approaches to Memory and Plasticity}{Teaching Assistant}{2016}{NCBS, Bangalore}
+\begin{itemize}
+\item Tutorial in Machine Learning for neural data analysis 
+\item Tutorial in Rate models of neural populations and single neurons
+\item Tutorial in Building a multiscale model from scratch
+\item Supervised miniprojects for participants
+\end{itemize}
+
+\cvsection{Awards/Fellowships}
+
+\cvevent{Prize of Excellence}{Ekard Research School of Biological Science}{2017}{}
+In recognition of achievements in undergraduate studies
+\divider
+
+\cvevent{KVPY (Kishore Vaigyanik Protsahan Yojana) Fellowship }{DST, Government of India}{2011-2016}{}
+Awarded to the top 200 science students from India each year.
+\divider
+
+\cvevent{NTSE (National Talent Search Exam) Scholarship }{NCERT, Government of India}{2009-2011}{}
+Awarded to the top 1000 students from India each year.
+
+
 
 %\divider
 %\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
