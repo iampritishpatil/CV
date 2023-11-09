@@ -228,7 +228,12 @@
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
 
 %\RequirePackage[backend=biber,style=authoryear,sorting=ydnt]{biblatex}
-\RequirePackage[backend=biber,style=authoryear,sorting=ydnt,maxbibnames=99]{biblatex}
+
+
+\RequirePackage[backend=biber,style=mla ,sorting=ydnt,maxbibnames=99]{biblatex}
+
+%\RequirePackage[backend=biber,style=authoryear,sorting=ydnt,maxbibnames=99]{biblatex}
+
 %\RequirePackage[backend=biber,style=mla,sorting=ydnt]{biblatex}
 %% For removing numbering entirely when using a numeric style
 % \setlength{\bibhang}{1em}
