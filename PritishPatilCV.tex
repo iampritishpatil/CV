@@ -23,7 +23,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[10pt,a4paper]{altacv}
+\documentclass[11pt,a4paper]{altacv}
 
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
@@ -36,7 +36,7 @@
 
 
 % Change the page layout if you need to
-\geometry{left=1cm,right=9.4cm,marginparwidth=7.2cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\geometry{left=2cm,right=9.4cm,marginparwidth=6.2cm,marginparsep=1.2cm,top=2.25cm,bottom=2.25cm}
 
 % Change the font if you want to.
 
@@ -44,12 +44,16 @@
 \usepackage[utf8]{inputenc}
 %\usepackage[T1]{fontenc}
 
-\usepackage[OT1]{fontenc}[Ligatures=TeX]
+%\usepackage[OT1]{fontenc}[Ligatures=TeX]
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
 %\usepackage[default]{lato}
 %\usepackage{libertine}
 \usepackage{biolinum}
 
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+
+
 
 \usepackage{bbding} 
 
@@ -126,10 +130,12 @@
 }
 
 \makeauthorsbold{Patil,Pritish}
+%\makeauthorsbold{Patil*,Pritish}
+
 
 \renewcommand{\bibfont}{\textnormal}
 
-
+\renewcommand{\familydefault}{\sfdefault}
 
 
 
@@ -177,17 +183,22 @@
 \nocite{*}
 
 
-\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+\printbibliography[heading=none,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
 
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Other articles}},type=misc]
+
+
+\begin{comment}
 
 
 \cvsection{research experience}
 
 \cvevent{Role of inhibitory interneurons in working memory}{Prof. Ofer Yizhar, Prof. Misha Tsodyks}{2017-Ongoing}{Weizmann Institute of Science}
 \begin{itemize}
-\item Made new automated spatial working memory task for mice.
-\item Studied a theoretical model of working memory with various interneuron subtypes. 
-\item Tested long duration inhibition of c-fos using st-GtACR in the mouse mPFC.
+
+\item Made new automated spatial working memory task for mice
+\item Studied a theoretical model of working memory with various interneuron subtypes
+\item Tested long duration inhibition of c-fos using stGtACR in the mouse mPFC
 \end{itemize}
 
 \divider
@@ -197,22 +208,22 @@
 \cvevent{Testing st-GtACR in-vivo with fear conditioning}{Prof. Ofer Yizhar}{2017}{Weizmann Institute of Science}
 \begin{itemize}
 \item Injected mice with the st-GtACR in BLA
-\item Used fear conditioning as an assay to quantify effectiveness of silencing of st-GtACR to prevent extinction of fear conditioning.
+\item Used fear conditioning as an assay to quantify the effectiveness of silencing of st-GtACR to prevent the extinction of fear conditioning
 \end{itemize}
 \divider
 
 
-\cvevent{Modeling and Recording Starburst Amacrine Cells}{Dr. Michal Rivlin}{2017}{Weizmann Institute of Science}
+\cvevent{Modeling and recording starburst amacrine cells}{Dr. Michal Rivlin}{2017}{Weizmann Institute of Science}
 \begin{itemize}
 \item Learned to patch clamp record from retinal neurons.
-\item Worked to make detailed biophysically realistic models to simulate Starburst Amacrine cells to study their direction selectivity.
+\item Worked to make detailed biophysically realistic models to simulate starburst amacrine cells to study their dendritic direction selectivity
 \end{itemize}
 \divider
 
 
 \cvevent{Recovering synchronization of data}{Prof. Nachum Ulanovsky}{2016}{Weizmann Institute of Science}
 \begin{itemize}
-\item Analzyed collected data from bat location and electrophysiology to try to recover the lost synchronization between the data streams.
+\item Analyzed collected data from bat location and electrophysiology to recover the lost synchronization between the data streams
 \end{itemize}
 \divider
 
@@ -220,20 +231,26 @@
 
 \cvevent{Making a realistic model CA1 Pyramidal Neuron in MOOSE}{Prof. Upinder S Bhalla}{2015 – 2016}{NCBS Bangalore}
 \begin{itemize}
-\item Wrote an optimization routine with to fit detailed biophysical models of neurons to experimental patch clamp data.
-\item Worked to extract features to be used in the optimization routine.
+\item Wrote an optimization routine to fit detailed biophysical models of neurons to experimental patch clamp data
+\item Worked to extract features to be used in the optimization routine
 \end{itemize}
 
 \vspace{2em}
 
+\end{comment}
 
-\addnextpagesidebar[-1ex]{page2sidebar}
+\begin{comment}
+    
 
 \cvevent{Finding network topologies which show adaptation response}{Prof. Sandeep Krishna}{2014}{NCBS, Bangalore}
 \begin{itemize}
-\item Wrote fast simulation of protein interactions with Michels-Menten kinetics.
-\item Sampled various topologies/parameters to find adaptation response. 
+\item Wrote fast simulation of protein interactions with Michaelis–Menten kinetics
+\item Sampled various topologies/parameters to find adaptation response 
 \end{itemize}
+\end{comment}
+
+\addnextpagesidebar[-1ex]{page2sidebar}
+
 
 %\clearpage
 
@@ -241,34 +258,54 @@
 \cvsection{Teaching}
 %\marginpar[page2sidebar]{}
 
+\cvevent{TA : Systems Neuroscience Seminar}{}{2022-ongoing}{Weizmann Insititute}
 
-\cvevent{Computational Approaches to Memory and Plasticity}{Teaching Assistant}{2016}{NCBS, Bangalore}
-\begin{itemize}
-\item Tutorial in Machine Learning for neural data analysis 
-\item Tutorial in Rate models of neural populations and single neurons
-\item Tutorial in Building a multiscale model from scratch
-\end{itemize}
 
+\cvevent{TA : Models and Data Analysis in Neuroscience}{}{2021}{Weizmann Insititute}
+
+% \begin{itemize}
+% \item Tutorial in machine learning for neural data analysis 
+% \item Tutorial in rate models of neural populations and single neurons
+% \item Tutorial in building a multiscale model from scratch
+% \item Supervised miniprojects for participants
+% \end{itemize}
+
+
+\cvevent{TA : Computational Approaches to Memory and Plasticity}{}{2016}{NCBS, Bangalore}
+% \begin{itemize}
+% \item Tutorial in machine learning for neural data analysis 
+% \item Tutorial in rate models of neural populations and single neurons
+% \item Tutorial in building a multiscale model from scratch
+% \item Supervised miniprojects for participants
+% \end{itemize}
+\newpage
 \cvsection{Awards/Fellowships}
 
 \cvevent{Prize of Excellence}{Ekard Research School of Biological Science}{2017}{}
-In recognition of achievements in undergraduate studies
-\divider
+%In recognition of achievements in undergraduate studies
+%\divider
 
 \cvevent{KVPY (Kishore Vaigyanik Protsahan Yojana) Fellowship }{DST, Government of India}{2011-2016}{}
-Awarded to the top 200 science students from India each year.
-\divider
+%Awarded to the top 200 science students from India each year
+%\divider
 
 \cvevent{NTSE (National Talent Search Exam) Scholarship }{NCERT, Government of India}{2009-2011}{}
-Awarded to the top 1000 students from India each year.
+%Awarded to the top 1000 students from India each year.
 
+%\pagebreak
 
 \cvsection{Summer schools}
 
-\cvevent{Transylvanian Experimental Neuroscience Summer School
-}{} {2019}{Romania}
-Experimental and theoretical methods to study the brain
-%\divider
+
+\cvevent{
+Transylvanian Experimental Neuroscience Summer School (TENSS) 2019
+ }{}{2019}{Romania}
+
+Experimental and theoretical methods to study how the brain %operates at the level of neuronal circuits. It covers various optical and electrophysiological concepts and techniques used currently in systems neuroscience from the basics to advanced topics on both theoretical and experimental grounds. 
+
+\cvevent{
+Shaping the Future of Bioengineering }{}{2017}{Davos}
+Number of topics trending in the field of bioengineering%: Technologies for biomedical application, synthetic and systems biology, tissue bioengineering
 
 
 \cvevent{
@@ -277,15 +314,11 @@ Number of topics trending in the field of bioengineering
 %\divider
 
 \cvevent{Computational Approaches to Memory and Plasticity }{}{2015}{NCBS, Bangalore}
-16-day summer school on the theory and simulation of learning, memory and plasticity in the brain.
-%\divider
+
+ Theory and simulation of learning, memory and plasticity in the brain.
 
 \cvevent{Physics of Life, NCBS-Simons Annual Monsoon School }{}{2014}{NCBS, Bangalore}
-Biophysics and soft-matter physics, information processing and decision
-making, stochastic processes in molecules or populations; dynamical
-systems models of genetic networks or biomechanical systems
-
-%Topics included: biophysics and soft-matter physics, ranging from aspects molecules to those of cells and tissues; information processing and decision making, at the level of cells or of the brain; stochastic processes in molecules or populations; dynamical systems models of genetic networks or biomechanical systems
+Biophysics and soft-matter physics,  information processing and decision making, stochastic processes in molecules or populations; dynamical systems models of genetic networks or biomechanical systems
 
 %\divider
 %\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
