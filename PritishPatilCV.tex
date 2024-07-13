@@ -23,7 +23,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[11pt,a4paper]{altacv}
+\documentclass[10pt,a4paper]{altacv}
 
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
@@ -49,7 +49,8 @@
 \usepackage[utf8]{inputenc}
 %\usepackage[default]{lato}
 %\usepackage{libertine}
-\usepackage{biolinum}
+% \usepackage{biolinum}
+\usepackage{libertinus}
 
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 
@@ -71,14 +72,21 @@
 
 
 %\definecolor{PritishPurple1}{HTML}{3e2653}
-\definecolor{PritishPurple2}{HTML}{553086}
 %\definecolor{PritishPurple3}{HTML}{5423a9}
-
-\definecolor{PritishPurple1}{HTML}{000447}
 %\definecolor{PritishPurple2}{HTML}{5c007c}
-\definecolor{PritishPurple3}{HTML}{4a3348}
 
-%\definecolor{VividPurple}{HTML}{3E0097}
+% \definecolor{PritishPurple1}{HTML}{000447}
+% \definecolor{PritishPurple2}{HTML}{553086}
+% \definecolor{PritishPurple3}{HTML}{3a2338}
+
+
+\definecolor{PritishPurple1}{HTML}{17005E}
+\definecolor{PritishPurple2}{HTML}{3D077F}
+\definecolor{PritishPurple3}{HTML}{630E9F}
+\definecolor{PritishPurple4}{HTML}{3C3243}
+
+
+% \definecolor{VividPurple}{HTML}{3E0097}
 %\definecolor{SlateGrey}{HTML}{2E2E2E}
 %\definecolor{LightGrey}{HTML}{361763}
 %\colorlet{heading}{VividPurple}
@@ -86,10 +94,10 @@
 %\colorlet{emphasis}{SlateGrey}
 %\colorlet{body}{LightGrey}
 
-\colorlet{heading}{PritishPurple2}
+\colorlet{heading}{PritishPurple3}
 \colorlet{accent}{PritishPurple2}
 \colorlet{emphasis}{PritishPurple1}
-\colorlet{body}{PritishPurple3}
+\colorlet{body}{PritishPurple4}
 
 
 
@@ -115,14 +123,11 @@
 \newcommand{\makeauthorsbold}[1]{%
   \DeclareNameFormat{author}{%
   \setboolean{bold}{false}%
-    \renewcommand{\do}[1]{\expandafter\ifstrequal\expandafter{\namepartfamily}{####1}{\setboolean{bold}{true}}{}}%
-    \docsvlist{#1}%
-    \ifthenelse{\value{listcount}=1}
-    {%
-      {\expandafter\ifthenelse{\boolean{bold}}{\mkbibbold{\namepartfamily\addcomma\addspace \namepartgiveni}}{\namepartfamily\addcomma\addspace \namepartgiveni}}%
-    }{\ifnumless{\value{listcount}}{\value{liststop}}
-      {\expandafter\ifthenelse{\boolean{bold}}{\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}%
-      {\expandafter\ifthenelse{\boolean{bold}}{\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}%
+    \renewcommand{\do}[1]{\expandafter\ifstrequal\expandafter{\namepartfamily}{####1}{\setboolean{bold}{true}}{}\expandafter\ifstrequal\expandafter{\namepartfamily}{*####1}{\setboolean{bold}{true}}{}}\docsvlist{#1}%
+    \ifthenelse{\value{listcount}=1}%
+    {{\expandafter\ifthenelse{\boolean{bold}}{\color{PritishPurple1}\mkbibbold{\namepartfamily\addcomma\addspace \namepartgiveni}}{\namepartfamily\addcomma\addspace \namepartgiveni}}}{\ifnumless{\value{listcount}}{\value{liststop}}%
+      {\expandafter\ifthenelse{\boolean{bold}}{\color{PritishPurple1}\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}%
+      {\expandafter\ifthenelse{\boolean{bold}}{\color{PritishPurple1}\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}%
       }
     \ifthenelse{\value{listcount}<\value{liststop}}
     {\addcomma\space}{}
@@ -130,7 +135,6 @@
 }
 
 \makeauthorsbold{Patil,Pritish}
-%\makeauthorsbold{Patil*,Pritish}
 
 
 \renewcommand{\bibfont}{\textnormal}
@@ -185,114 +189,105 @@
 
 \printbibliography[heading=none,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
 
-% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Other articles}},type=misc]
+%\printbibliography[heading=pubtype,title={{preprints and others}},type=misc]
 
 
-\begin{comment}
+\addnextpagesidebar[-1ex]{page2sidebar}
 
 
-\cvsection{research experience}
+\cvsection{research experience (pre-PHD)}
 
-\cvevent{Role of inhibitory interneurons in working memory}{Prof. Ofer Yizhar, Prof. Misha Tsodyks}{2017-Ongoing}{Weizmann Institute of Science}
-\begin{itemize}
+\cvevent{Role of inhibitory interneurons in working memory}{Prof. Ofer Yizhar, Prof. Misha Tsodyks}{2017-2019}{Weizmann Institute of Science}
+Developed and tested a novel automated spatial working memory task for mice. Also developed a theoretical model of working memory involving different interneuron subtypes.
 
-\item Made new automated spatial working memory task for mice
-\item Studied a theoretical model of working memory with various interneuron subtypes
-\item Tested long duration inhibition of c-fos using stGtACR in the mouse mPFC
-\end{itemize}
 
 \divider
 
 
 
 \cvevent{Testing st-GtACR in-vivo with fear conditioning}{Prof. Ofer Yizhar}{2017}{Weizmann Institute of Science}
-\begin{itemize}
-\item Injected mice with the st-GtACR in BLA
-\item Used fear conditioning as an assay to quantify the effectiveness of silencing of st-GtACR to prevent the extinction of fear conditioning
-\end{itemize}
+Demonstrated the effectiveness of the st-GtACR opsin in fear conditioning assay in mice.
+
+%\divider
+\pagebreak
+
+\cvevent{Modeling and starburst amacrine cells}{Dr. Michal Rivlin}{2017}{Weizmann Institute of Science}
+Worked to make detailed biophysically realistic simulation of starburst amacrine cells to study their dendritic direction selectivity.
+
 \divider
-
-
-\cvevent{Modeling and recording starburst amacrine cells}{Dr. Michal Rivlin}{2017}{Weizmann Institute of Science}
-\begin{itemize}
-\item Learned to patch clamp record from retinal neurons.
-\item Worked to make detailed biophysically realistic models to simulate starburst amacrine cells to study their dendritic direction selectivity
-\end{itemize}
-\divider
-
-
-\cvevent{Recovering synchronization of data}{Prof. Nachum Ulanovsky}{2016}{Weizmann Institute of Science}
-\begin{itemize}
-\item Analyzed collected data from bat location and electrophysiology to recover the lost synchronization between the data streams
-\end{itemize}
-\divider
-
 
 
 \cvevent{Making a realistic model CA1 Pyramidal Neuron in MOOSE}{Prof. Upinder S Bhalla}{2015 – 2016}{NCBS Bangalore}
-\begin{itemize}
-\item Wrote an optimization routine to fit detailed biophysical models of neurons to experimental patch clamp data
-\item Worked to extract features to be used in the optimization routine
-\end{itemize}
+I optimized detailed biophysical neuron models to match experimental patch clamp data by developing a fitting routine and extracting relevant features from the data.
 
-\vspace{2em}
+% \vspace{2em}
+\divider
 
-\end{comment}
-
-\begin{comment}
     
 
 \cvevent{Finding network topologies which show adaptation response}{Prof. Sandeep Krishna}{2014}{NCBS, Bangalore}
-\begin{itemize}
-\item Wrote fast simulation of protein interactions with Michaelis–Menten kinetics
-\item Sampled various topologies/parameters to find adaptation response 
-\end{itemize}
-\end{comment}
-
-\addnextpagesidebar[-1ex]{page2sidebar}
+Developed a fast simulation tool for protein interactions, sampling different topologies and parameters to identify adaptive responses
 
 
 %\clearpage
 
 %\cvsection[page2sidebar]{Publications}
-\cvsection{Teaching}
-%\marginpar[page2sidebar]{}
-
-\cvevent{TA : Systems Neuroscience Seminar}{}{2022-ongoing}{Weizmann Insititute}
-
-
-\cvevent{TA : Models and Data Analysis in Neuroscience}{}{2021}{Weizmann Insititute}
-
-% \begin{itemize}
-% \item Tutorial in machine learning for neural data analysis 
-% \item Tutorial in rate models of neural populations and single neurons
-% \item Tutorial in building a multiscale model from scratch
-% \item Supervised miniprojects for participants
-% \end{itemize}
-
-
-\cvevent{TA : Computational Approaches to Memory and Plasticity}{}{2016}{NCBS, Bangalore}
-% \begin{itemize}
-% \item Tutorial in machine learning for neural data analysis 
-% \item Tutorial in rate models of neural populations and single neurons
-% \item Tutorial in building a multiscale model from scratch
-% \item Supervised miniprojects for participants
-% \end{itemize}
-\newpage
 \cvsection{Awards/Fellowships}
 
-\cvevent{Prize of Excellence}{Ekard Research School of Biological Science}{2017}{}
+
+
+
+\cvevent{Prize of Excellence}{Ekard Research School of Biological Science}{2017}{Weizmann Institute}
 %In recognition of achievements in undergraduate studies
 %\divider
+
+
+\cvevent{Silver Medal at International Biology Olympiad}{}{2012}{Singapore, Singapore}
+
+\cvevent{Silver Medal at International Biology Olympiad}{}{2011}{Taipei, Taiwan}
+
+\cvevent{Silver Medal at International Astronomy Olympiad}{}{2010}{Sudak, Ukraine}
 
 \cvevent{KVPY (Kishore Vaigyanik Protsahan Yojana) Fellowship }{DST, Government of India}{2011-2016}{}
 %Awarded to the top 200 science students from India each year
 %\divider
 
+
 \cvevent{NTSE (National Talent Search Exam) Scholarship }{NCERT, Government of India}{2009-2011}{}
 %Awarded to the top 1000 students from India each year.
 
-%\pagebreak
+\pagebreak
+
+
+\cvsection{Teaching}
+%\marginpar[page2sidebar]{}
+
+\cvevent{TA : Systems Neuroscience Seminar}{The department journal club}{2021-ongoing}{Weizmann Insititute}
+
+
+\cvevent{TA : Data Analysis Workshop}{Supervised and unsupervised learning of high-dimensional data}{2022}{ISFN, Eilat}
+
+
+\cvevent{TA : Models and Data Analysis in Neuroscience}{First iteration of the course, created tutorials and assignments from scratch }{2021}{Weizmann Insititute}
+
+% \begin{itemize}
+% \item Tutorial in machine learning for neural data analysis 
+% \item Tutorial in rate models of neural populations and single neurons
+% \item Tutorial in building a multiscale model from scratch
+% \item Supervised miniprojects for participants
+% \end{itemize}
+
+
+\cvevent{TA : Computational Approaches to Memory and Plasticity}{Tutorials on simple and detailed models in neuroscience. Supervised projects}{2016}{NCBS, Bangalore}
+% \begin{itemize}
+% \item Tutorial in machine learning for neural data analysis 
+% \item Tutorial in rate models of neural populations and single neurons
+% \item Tutorial in building a multiscale model from scratch
+% \item Supervised miniprojects for participants
+% \end{itemize}
+%\newpage
+
+
 
 \cvsection{Summer schools}
 
@@ -303,9 +298,6 @@ Transylvanian Experimental Neuroscience Summer School (TENSS) 2019
 
 Experimental and theoretical methods to study how the brain %operates at the level of neuronal circuits. It covers various optical and electrophysiological concepts and techniques used currently in systems neuroscience from the basics to advanced topics on both theoretical and experimental grounds. 
 
-\cvevent{
-Shaping the Future of Bioengineering }{}{2017}{Davos}
-Number of topics trending in the field of bioengineering%: Technologies for biomedical application, synthetic and systems biology, tissue bioengineering
 
 
 \cvevent{
